@@ -13,7 +13,7 @@ Ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository_url>
+git clone <[link](https://github.com/Azterix101/smart-search-algorithm.git)>
 cd smart-search-algorithm
 ```
 
