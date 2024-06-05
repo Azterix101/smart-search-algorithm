@@ -25,14 +25,23 @@ npm install
 
 ### 3. Configure Environment Variables
 
-Create a `.env` file in the root directory and add the following:
+Create a `config.json` file in the root directory and add the following:
 
 ```env
-DB_USERNAME=your_db_username
-DB_PASSWORD=your_db_password
-DB_HOST=your_db_host
+=
+=
+DB_HOST=
 DB_PORT=5432
 DB_NAME=entity_extraction_dev
+{
+  "development": {
+    "username": "your_db_username",
+    "password": "your_db_password",
+    "database": "entity_extraction_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
 ```
 
 ### 4. Initialize Sequelize
