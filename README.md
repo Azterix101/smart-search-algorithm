@@ -27,12 +27,8 @@ npm install
 
 Create a `config.json` file in the root directory and add the following:
 
-```env
-=
-=
-DB_HOST=
-DB_PORT=5432
-DB_NAME=entity_extraction_dev
+```config
+
 {
   "development": {
     "username": "your_db_username",
@@ -106,44 +102,6 @@ npx sequelize-cli db:migrate
 
 ```bash
 npm start
-```
-
-## Testing
-
-### Unit Tests
-
-1. Install Testing Dependencies:
-
-```bash
-npm install mocha chai supertest --save-dev
-```
-
-2. Create a `test` directory and add your tests. For example, `test/sample.test.js`:
-
-```javascript
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const server = require('../app');
-const should = chai.should();
-
-chai.use(chaiHttp);
-
-describe('Sample Test', () => {
-  it('should pass this test', (done) => {
-    chai.request(server)
-      .get('/')
-      .end((err, res) => {
-        res.should.have.status(200);
-        done();
-      });
-  });
-});
-```
-
-3. Run the Tests:
-
-```bash
-npm test
 ```
 
 ## Conclusion
